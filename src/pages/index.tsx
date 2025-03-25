@@ -452,7 +452,7 @@ export default function App({ serverIm }: { serverIm: string }) {
 
         <footer className="text-center mt-12 p-6 text-gray-600">
           <p className="font-medium">
-            &copy; {new Date().getFullYear()} {im.name} - {im.cargo}
+            &copy; 2022-{new Date().getFullYear()} {im.name} - {im.cargo}
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
@@ -614,7 +614,7 @@ export async function getServerSideProps(_context: { req: any; res: any }) {
       },
       {
         name: "GitHub",
-        url: "https://github.com/seuperfil",
+        url: "https://github.com/LucasAmaralDev",
       },
       {
         name: "Email",
