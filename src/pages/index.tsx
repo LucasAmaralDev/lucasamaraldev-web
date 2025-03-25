@@ -456,7 +456,7 @@ export default function App({ serverIm }: { serverIm: string }) {
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
-              href="https://github.com/seuusuario"
+              href={im.links[1].url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-500 transition-colors"
@@ -464,7 +464,7 @@ export default function App({ serverIm }: { serverIm: string }) {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/seuperfil"
+              href={im.links[0].url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-500 transition-colors"
@@ -472,7 +472,7 @@ export default function App({ serverIm }: { serverIm: string }) {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="mailto:seu.email@exemplo.com"
+              href={im.links[2].url}
               className="text-gray-500 hover:text-blue-500 transition-colors"
             >
               <FaEnvelope size={24} />
@@ -618,7 +618,7 @@ export async function getServerSideProps(_context: { req: any; res: any }) {
       },
       {
         name: "Email",
-        url: "mailto:seu.email@exemplo.com",
+        url: "mailto:lucasamaraltecnologia@gmail.com",
       },
     ],
     experiencias: [
@@ -669,20 +669,26 @@ export async function getServerSideProps(_context: { req: any; res: any }) {
       {
         icon: "FaEnvelope",
         title: "Email",
-        value: "lucas.amaral@gmail.com",
-        link: "mailto:lucas.amaral@gmail.com",
+        value: "lucasamaraltecnologia@gmail.com",
+        link: "mailto:lucasamaraltecnologia@gmail.com",
       },
       {
         icon: "FaLinkedin",
         title: "LinkedIn",
-        value: "https://www.linkedin.com/in/lucas-amaral-desenvolvedor/",
+        value: "lucas-amaral-desenvolvedor",
         link: "https://www.linkedin.com/in/lucas-amaral-desenvolvedor/",
       },
       {
         icon: "FaGithub",
         title: "GitHub",
-        value: "https://github.com/seuperfil",
-        link: "https://github.com/seuperfil",
+        value: "LucasAmaralDev",
+        link: "https://github.com/LucasAmaralDev",
+      },
+      {
+        icon: "FaWhatsapp",
+        title: "WhatsApp",
+        value: "55 (65) 9 99361-3207",
+        link: "https://wa.me/55659993613207",
       },
     ],
   };
