@@ -15,6 +15,7 @@ import {
   FaLinkedin,
   FaTimes,
 } from "react-icons/fa";
+import SEO from "@/components/SEO";
 
 export default function App({ serverIm }: { serverIm: string }) {
   const [activeSection, setActiveSection] = useState("sobre");
@@ -78,6 +79,12 @@ export default function App({ serverIm }: { serverIm: string }) {
 
   return (
     <div className="relative bg-gray-50">
+      <SEO
+        title="Desenvolvedor Full Stack"
+        description="Portfolio profissional de Lucas Amaral, desenvolvedor Full Stack especializado em desenvolvimento web moderno. Conheça meus projetos, habilidades e experiências."
+        keywords="desenvolvedor full stack, programador, web developer, react, next.js, typescript, javascript, portfolio, desenvolvimento web"
+        canonicalUrl="https://lucasamaraldev.com"
+      />
       {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
