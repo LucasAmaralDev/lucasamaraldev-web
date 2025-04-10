@@ -1,0 +1,8 @@
+# Ignorar pasta database
+src/database/**/*
+
+# Outros arquivos que podem ser ignorados
+node_modules
+.next
+build
+dist 

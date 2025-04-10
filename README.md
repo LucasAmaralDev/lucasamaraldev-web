@@ -1,73 +1,82 @@
-# Portfolio Web - Lucas Amaral
+# Sistema Multi-Usuários de Portfólios
 
-## 📋 Sobre o Projeto
+Este projeto é uma plataforma onde usuários podem se cadastrar e criar seus próprios portfólios online. Foi desenvolvido utilizando Next.js, TypeScript, TypeORM e PostgreSQL.
 
-Este é um site de portfolio profissional desenvolvido com tecnologias modernas para apresentar minhas habilidades, experiências e projetos como desenvolvedor. O site possui um design responsivo e oferece uma navegação intuitiva entre as diferentes seções.
+## Funcionalidades
 
-## 🚀 Funcionalidades
+- Cadastro e login de usuários
+- Painel de controle para gerenciamento de portfólios
+- Criação de múltiplos portfólios por usuário
+- Personalização completa de cada portfólio
+- Páginas públicas para visualização dos portfólios
 
-- **Seção Sobre**: Apresentação pessoal e informações básicas
-- **Habilidades**: Exibição das minhas competências técnicas
-- **Portfolio**: Galeria de projetos desenvolvidos
-- **Experiência**: Histórico profissional e acadêmico
-- **Contato**: Formulário e informações para contato
+## Tecnologias Utilizadas
 
-## 🛠️ Tecnologias Utilizadas
+- **Frontend**: Next.js, React, Tailwind CSS
+- **Backend**: Node.js com API Routes do Next.js
+- **Banco de Dados**: PostgreSQL
+- **ORM**: TypeORM
+- **Autenticação**: JWT
 
-- **Next.js 15.2.4**: Framework React para renderização do lado do servidor
-- **React 19**: Biblioteca JavaScript para construção de interfaces
-- **TypeScript**: Superset tipado de JavaScript
-- **TailwindCSS 4**: Framework CSS para estilização
-- **React Icons**: Biblioteca de ícones
+## Pré-requisitos
 
-## ⚙️ Requisitos
+- Node.js (v14 ou superior)
+- PostgreSQL (v12 ou superior)
 
-- Node.js (versão recomendada: 18.x ou superior)
-- npm ou yarn
+## Configuração do Ambiente
 
-## 🔧 Instalação
-
-1. Clone este repositório
+1. Clone o repositório:
 
 ```bash
-git clone https://github.com/lucasamaraldev/lucasamaraldev-web.git
-cd lucasamaraldev-web
+git clone https://seu-repositorio/meu-portfolio.git
+cd meu-portfolio
 ```
 
-2. Instale as dependências
+2. Instale as dependências:
 
 ```bash
 npm install
-# ou
-yarn install
 ```
 
-3. Execute o projeto em modo desenvolvimento
+3. Configure as variáveis de ambiente:
+
+   - Copie o arquivo `.env.example` para `.env`
+   - Preencha as informações de conexão com o banco de dados e a chave secreta do JWT
+
+4. Execute as migrations do banco de dados:
+
+```bash
+npm run typeorm migration:run
+```
+
+5. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# ou
-yarn dev
 ```
 
-O site estará disponível em `https://lucasamaraldev.com/`
+## Migrations do Banco de Dados
 
-## 🚀 Deployment
-
-Para gerar a versão de produção:
+Para criar novas migrations:
 
 ```bash
-npm run build
-npm run start
-# ou
-yarn build
-yarn start
+npm run typeorm migration:generate -- -n nome-da-migracao
 ```
 
-## 📝 Licença
+Para executar as migrations:
 
-Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
+```bash
+npm run typeorm migration:run
+```
 
----
+## Estrutura do Projeto
 
-Desenvolvido com ❤️ por Lucas Amaral
+- `/src/pages` - Páginas da aplicação e APIs
+- `/src/components` - Componentes React reutilizáveis
+- `/src/database` - Configuração do banco de dados, entidades e migrations
+- `/src/interfaces` - Interfaces TypeScript
+- `/src/css` - Arquivos de estilo
+
+## Contribuindo
+
+Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
